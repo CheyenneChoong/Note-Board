@@ -7,10 +7,11 @@
         mc:Ignorable="d"
         Title="MainWindow"
         WindowState="Maximized"
-        ResizeMode="NoResize"
-        MaxHeight="{x:Static SystemParameters.PrimaryScreenHeight}"
+        ResizeMode="CanResize"
+        MinWidth="800" MinHeight="600"
         Background="#7D848B">
 
-    <Grid>
-    </Grid>
+    <Border BorderBrush="#7D492E" BorderThickness="10" Margin="20" Height="Auto">
+        <Canvas Background="#FFFFFF" ></Canvas>
+    </Border>
 </Window>
