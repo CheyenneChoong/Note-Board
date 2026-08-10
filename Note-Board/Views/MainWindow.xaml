@@ -12,6 +12,9 @@
         Background="#7D848B">
 
     <Border BorderBrush="#7D492E" BorderThickness="10" Margin="20" Height="Auto">
-        <Canvas Background="#FFFFFF"></Canvas>
+        <Canvas Background="#FFFFFF">
+            <local:Cardholder Canvas.Left="10" Canvas.Top="10" />
+            <local:Dustbin Canvas.Left="10" Canvas.Top="500" />
+        </Canvas>
     </Border>
 </Window>
