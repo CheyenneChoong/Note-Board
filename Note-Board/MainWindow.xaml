@@ -5,8 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Note_Board"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow"
+        WindowState="Maximized"
+        ResizeMode="NoResize"
+        MaxHeight="{x:Static SystemParameters.PrimaryScreenHeight}"
+        Background="#7D848B">
 
+    <Grid>
     </Grid>
 </Window>
