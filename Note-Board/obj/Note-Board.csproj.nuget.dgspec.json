@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\Project\\Note-Board\\Note-Board\\Note-Board\\Note-Board.csproj": {}
+    "c:\\Users\\User\\Desktop\\Project\\Note-Board\\Note-Board\\Note-Board\\Note-Board.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\Project\\Note-Board\\Note-Board\\Note-Board\\Note-Board.csproj": {
+    "c:\\Users\\User\\Desktop\\Project\\Note-Board\\Note-Board\\Note-Board\\Note-Board.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\Project\\Note-Board\\Note-Board\\Note-Board\\Note-Board.csproj",
+        "projectUniqueName": "c:\\Users\\User\\Desktop\\Project\\Note-Board\\Note-Board\\Note-Board\\Note-Board.csproj",
         "projectName": "Note-Board",
-        "projectPath": "C:\\Users\\User\\Desktop\\Project\\Note-Board\\Note-Board\\Note-Board\\Note-Board.csproj",
+        "projectPath": "c:\\Users\\User\\Desktop\\Project\\Note-Board\\Note-Board\\Note-Board\\Note-Board.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\Project\\Note-Board\\Note-Board\\Note-Board\\obj\\",
+        "outputPath": "c:\\Users\\User\\Desktop\\Project\\Note-Board\\Note-Board\\Note-Board\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -45,6 +45,12 @@
         "net10.0-windows": {
           "framework": "net10.0-windows7.0",
           "targetAlias": "net10.0-windows",
+          "dependencies": {
+            "Microsoft.Data.Sqlite": {
+              "target": "Package",
+              "version": "[10.0.11, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
