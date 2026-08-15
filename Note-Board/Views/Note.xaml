@@ -1,0 +1,10 @@
+<UserControl x:Class="Note_Board.Views.Note"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:Note_Board.Views">
+    <StackPanel Orientation="Vertical">
+        <TextBlock />
+        <TextBlock Text="Note" />
+    </StackPanel>
+</UserControl>
+
