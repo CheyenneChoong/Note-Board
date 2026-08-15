@@ -17,8 +17,8 @@
                 <local:Cardholder Canvas.Left="10" Canvas.Top="10" />
                 <local:Dustbin Canvas.Left="10" Canvas.Top="150" />
                 <local:Note />
-                <local:Countdown />
-                <local:Checklist />
+                <!-- <local:Countdown />
+                <local:Checklist /> -->
             </Canvas>
         </ScrollViewer>
     </Border>
