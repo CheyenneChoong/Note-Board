@@ -14,6 +14,7 @@ public class Card
 
     public Card(int id)
     {
+        cardId = id;
         using var connection = new SqliteConnection("Data Source=database.db");
         connection.Open();
 
@@ -34,7 +35,7 @@ public class Card
         connection.Close();
     }
 
-    public void UpdateCard(int id, string type, string update)
+    public void UpdateCard(string type, string update)
     {
         using var connection = new SqliteConnection("Data Source=database.db");
         connection.Open();
@@ -43,20 +44,20 @@ public class Card
         command.CommandText = "UPDATE card SET $type = $update WHERE card_id = $card_id;";
         command.Parameters.AddWithValue("$type", type);
         command.Parameters.AddWithValue("$update", update);
-        command.Parameters.AddWithValue("$card_id", id);
+        command.Parameters.AddWithValue("$card_id", cardId);
         command.ExecuteNonQuery();
 
         connection.Close();
     }
 
-    public void DeleteCard(int id)
+    public void DeleteCard()
     {
         using var connection = new SqliteConnection("Data Source=database.db");
         connection.Open();
 
         var command = connection.CreateCommand();
         command.CommandText = "DELETE FROM card WHERE card_id = $card_id;";
-        command.Parameters.AddWithValue("$card_id", id);
+        command.Parameters.AddWithValue("$card_id", cardId);
         command.ExecuteNonQuery();
 
         connection.Close();
