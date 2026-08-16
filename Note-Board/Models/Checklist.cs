@@ -31,4 +31,46 @@ public class Checklist : Card
         string progress = "Progress: " + completed.ToString() + " / " + total.ToString();
         return progress;
     }
+
+    public void AddItem(string item)
+    {
+        using var connection = new SqliteConnection("Data Source=database.db");
+        connection.Open();
+        var command = connection.CreateCommand();
+        command.CommandText = "INSERT INTO checklist (item, status) VALUES ($item, 'pending');";
+        command.Parameters.AddWithValue("$item", item);
+        command.ExecuteNonQuery();
+        connection.Close();
+    }
+
+    public void DeleteItem(int itemId)
+    {
+        using var connection = new SqliteConnection("Data Source=database.db");
+        connection.Open();
+        var command = connection.CreateCommand();
+        command.CommandText = "DELETE FROM checklist WHERE item_id = $item_id;";
+        command.Parameters.AddWithValue("$item_id", itemId);
+        command.ExecuteNonQuery();
+        connection.Close();
+    }
+
+    public void MarkItem(int itemId)
+    {
+        using var connection = new SqliteConnection("Data Source=database.db");
+        connection.Open();
+        var command = connection.CreateCommand();
+        command.CommandText = "SELECT status FROM checklist WHERE item_id = $item_id;";
+        command.Parameters.AddWithValue("$item_id", itemId);
+        using var readStatus = command.ExecuteReader();
+        if (readStatus.GetString(0).Equals("pending"))
+        {
+            command.CommandText = "UPDATE checklist SET status = 'completed' WHERE item_id = $item_id;";
+        } else
+        {
+            command.CommandText = "UPDATE checklist SET status = 'pending' WHERE item_id = $item_id;";
+        }
+        command.Parameters.AddWithValue("$item_id", itemId);
+        command.ExecuteNonQuery();
+        connection.Close();
+    }
 }

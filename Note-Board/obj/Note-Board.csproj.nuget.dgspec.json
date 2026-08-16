@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\User\\Desktop\\Project\\Note-Board\\Note-Board\\Note-Board\\Note-Board.csproj": {}
+    "C:\\Users\\User\\Desktop\\Project\\Note-Board\\Note-Board\\Note-Board\\Note-Board.csproj": {}
   },
   "projects": {
-    "c:\\Users\\User\\Desktop\\Project\\Note-Board\\Note-Board\\Note-Board\\Note-Board.csproj": {
+    "C:\\Users\\User\\Desktop\\Project\\Note-Board\\Note-Board\\Note-Board\\Note-Board.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\User\\Desktop\\Project\\Note-Board\\Note-Board\\Note-Board\\Note-Board.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\Project\\Note-Board\\Note-Board\\Note-Board\\Note-Board.csproj",
         "projectName": "Note-Board",
-        "projectPath": "c:\\Users\\User\\Desktop\\Project\\Note-Board\\Note-Board\\Note-Board\\Note-Board.csproj",
+        "projectPath": "C:\\Users\\User\\Desktop\\Project\\Note-Board\\Note-Board\\Note-Board\\Note-Board.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\User\\Desktop\\Project\\Note-Board\\Note-Board\\Note-Board\\obj\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\Project\\Note-Board\\Note-Board\\Note-Board\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
