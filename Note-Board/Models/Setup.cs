@@ -19,7 +19,7 @@ public class Setup
         CREATE TABLE IF NOT EXISTS card (
             card_id INTEGER PRIMARY KEY AUTOINCREMENT,
             title TEXT NOT NULL,
-            type TEXT NOT NULL,
+            note TEXT,
             colour TEXT NOT NULL,
             status TEXT NOT NULL,
             position_x INTEGER NOT NULL,
@@ -39,16 +39,6 @@ public class Setup
         );
         ";
         command.ExecuteNonQuery();
-
-        command.CommandText = 
-        @"
-        CREATE TABLE IF NOT EXISTS note (
-            note_id INTEGER PRIMARY KEY AUTOINCREMENT,
-            card_id INTEGER NOT NULL,
-            note TEXT NOT NULL,
-            FOREIGN KEY(card_id) REFERENCES card(card_id) ON DELETE CASCADE
-        );
-        ";
 
         connection.Close();
     }

@@ -6,7 +6,6 @@ public class Card
     private int cardId;
     private string title = "";
     private string type = "";
-    private string description = "";
     private string colour = "";
     private string status = "";
     private int positionX = 100;
@@ -25,12 +24,11 @@ public class Card
         while (readCard.Read())
         {
             title = readCard.GetString(1);
-            description = readCard.GetString(2);
-            type = readCard.GetString(3);
-            colour = readCard.GetString(4);
-            status = readCard.GetString(5);
-            positionX = readCard.GetInt32(6);
-            positionY = readCard.GetInt32(7);
+            type = readCard.GetString(2);
+            colour = readCard.GetString(3);
+            status = readCard.GetString(4);
+            positionX = readCard.GetInt32(5);
+            positionY = readCard.GetInt32(6);
         }
         connection.Close();
     }
@@ -69,8 +67,6 @@ public class Card
         {
             case "title":
                 return title;
-            case "description":
-                return description;
             case "type":
                 return type;
             case "colour":
