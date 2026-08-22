@@ -19,7 +19,6 @@ public class Setup
         CREATE TABLE IF NOT EXISTS card (
             card_id INTEGER PRIMARY KEY AUTOINCREMENT,
             title TEXT NOT NULL,
-            description TEXT NOT NULL,
             type TEXT NOT NULL,
             colour TEXT NOT NULL,
             status TEXT NOT NULL,
@@ -48,12 +47,22 @@ public class Setup
         CREATE TABLE IF NOT EXISTS countdown (
             countdown_id INTEGER PRIMARY KEY AUTOINCREMENT,
             card_id INTEGER NOT NULL,
-            date_time TEXT,
+            date_time TEXT NOT NULL,
             FOREIGN KEY(card_id) REFERENCES card(card_id) ON DELETE CASCADE
         );
         ";
         command.ExecuteNonQuery();
         Console.WriteLine("Execute query to create countdown");
+
+        command.CommandText = 
+        @"
+        CREATE TABLE IF NOT EXISTS note (
+            note_id INTEGER PRIMARY KEY AUTOINCREMENT,
+            card_id INTEGER NOT NULL,
+            note TEXT NOT NULL,
+            FOREIGN KEY(card_id) REFERENCES card(card_id) ON DELETE CASCADE
+        );
+        ";
 
         connection.Close();
     }
