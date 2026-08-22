@@ -27,32 +27,18 @@ public class Setup
         );
        ";
         command.ExecuteNonQuery();
-        Console.WriteLine("Execute query to create card");
 
         command.CommandText = 
         @"
         CREATE TABLE IF NOT EXISTS checklist (
             checklist_id INTEGER PRIMARY KEY AUTOINCREMENT,
             card_id INTEGER NOT NULL,
-            item TEXT NOT NULL,
+            item TEXT,
             status TEXT NOT NULL,
             FOREIGN KEY(card_id) REFERENCES card(card_id) ON DELETE CASCADE
         );
         ";
         command.ExecuteNonQuery();
-        Console.WriteLine("Execute query to create checklist");
-
-        command.CommandText = 
-        @"
-        CREATE TABLE IF NOT EXISTS countdown (
-            countdown_id INTEGER PRIMARY KEY AUTOINCREMENT,
-            card_id INTEGER NOT NULL,
-            date_time TEXT NOT NULL,
-            FOREIGN KEY(card_id) REFERENCES card(card_id) ON DELETE CASCADE
-        );
-        ";
-        command.ExecuteNonQuery();
-        Console.WriteLine("Execute query to create countdown");
 
         command.CommandText = 
         @"
