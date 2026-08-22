@@ -1,0 +1,12 @@
+<UserControl x:Class="Note_Board.Components.Cardholder"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:Note_Board.Components"
+        Width="110" Height="100" >
+    <StackPanel Orientation="Horizontal">
+        <Border CornerRadius="10,0,0,10"
+            Width="80" Height="100"
+            Background="#CDAC7C" />
+        <Rectangle Width="30" Height="90" Fill="#FFF697" />
+    </StackPanel>
+</UserControl>

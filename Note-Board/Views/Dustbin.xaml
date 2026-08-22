@@ -1,9 +1,0 @@
-<UserControl x:Class="Note_Board.Views.Dustbin"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <StackPanel Orientation="Horizontal">
-        <Border CornerRadius="0,0,10,10"
-            Width="100" Height="100"
-            Background="#ACC7DD" />
-    </StackPanel>
-</UserControl>
